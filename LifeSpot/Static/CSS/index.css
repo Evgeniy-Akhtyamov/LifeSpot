@@ -1,0 +1,75 @@
+/* Комбинированный селектор - применяется ко всем элементам */
+header,footer,aside,body,.navbar,.video-container{
+	font-family: "Helvetica 65 Medium", sans-serif;
+}	
+
+header,footer,body,.video-container{
+	background-color: linen;
+}
+
+/* Простые селекторы*/
+.video-container{
+	display: inline-block;
+	padding-left: 1%;
+	padding-top: 1%;
+}
+
+/* Стили панели навигации */
+.navbar p{
+	color: darkgray;
+	padding-left: 15%;
+}
+
+/* Стили панели навигации при наведении мышью */
+.navbar p:hover{
+	color: aliceblue;
+}
+
+/* Стили для формы поиска */
+form {
+	padding-left: 1%;
+	padding-top: 1%;
+}
+
+form input:focus{ 
+	border-color: black; 
+} 
+
+header{	
+	color: black;
+	padding-left: 1%;
+	padding-top: 1.2%;
+}
+
+/*селектор по идентификатору для хэдера*/
+#header-index{	
+	color: #44453f;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	font-size: medium;
+	color: dimgrey;   
+	line-height: 66%;
+	padding-left: 1%;
+}
+
+aside{
+	height: 100%; /* Высота в полный размер */
+	width: 10%;
+	position: fixed; /* Фиксированная позиция сайд-бара. Так он будет оставаться на месте при скроллинге */
+	z-index: 1; /* Сайд-бар будет поверх остальных элементов */
+	top: 0; /* Сайдбар будет в самой верхней части страницы */
+	left: 0;
+	background-color: #111; /* Черный цвет фона (задан в виде кода) */
+	overflow-x: hidden; /* Отключаем горизонтальную прокрутку */
+	padding-top: 2%;
+	font-size: large;
+}
+
+body{
+	padding-left: 11%;
+	position: relative;
+	padding-bottom: 6%;   
+}
