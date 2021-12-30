@@ -1,14 +1,32 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>LifeSpot</title>
+	<meta charset="UTF-8">
+	<title>LifeSpot</title>
 	<!--Подключение стилей по относительному пути из внешнего файла-->
 	<link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
+	<!-- Подключение Javascript-->
+	<script src="../Static/JS/index.js"></script>
+	<!-- Внутренний скрипт с вызовами функций -->
+	<script>
+        // Проверка на возраст
+        checkAge();
+        // сохранение сессии
+        handleSession();
+        // Логируем в консоль.
+        sessionLog();
+        // функция для получения пользовательского ввода
+        const inputParseFunction = function() {
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+		}
+        setTimeout(() =>
+            alert("Нравится LifeSpot? " + '\n' + "Подпишитесь на наш Instagram @lifespot999!"),
+            30000);
+	</script>
 </head>
 <!--Сайд-бар страницы-->
 <aside id="sidebar">
-	<div class="navbar">	    
+	<div class="navbar">
 		<a href="/"><p>Все трансляции</p></a>
 		<a href="/"><p>О проекте</p></a>
 	</div>
@@ -19,15 +37,13 @@
 	<h1> LifeSpot - прямые трансляции с улиц</h1>
 	<!--Параграф-->
 	<p>Покажем, что происходит прямо сейчас</p>
+	<input type="text" placeholder="Поиск видео" oninput="filterContent();" size=50>
 </header>
-<body>
-	<form>
-		<p><input type="text" placeholder="Поиск видео" size="50"></p>
-	</form>
-    <div class="bordered">       
-		<div class="video-container">		   
+<body>	
+	<div class="bordered">
+		<div class="video-container">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/srlpC5tmhYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			<h3 class="video-title">Нью-Йорк, Брайант Парк</h3>	
+			<h3 class="video-title">Нью-Йорк, Брайант Парк</h3>
 		</div>
 		<div class="video-container">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/wCcMcaiRbhM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -44,4 +60,6 @@
 	<p>LifeSpot - все права защищены</p>
 	<p>Связаться с нами: contact@lifespot.ru</p>
 </footer>
+<!--SIDEBAR-->
+<!--FOOTER-->
 </html>

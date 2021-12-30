@@ -26,12 +26,7 @@ header,footer,body,.video-container{
 }
 
 /* Стили для формы поиска */
-form {
-	padding-left: 1%;
-	padding-top: 1%;
-}
-
-form input:focus{ 
+input:focus{ 
 	border-color: black; 
 } 
 
@@ -50,14 +45,15 @@ footer {
 	position: absolute;
 	bottom: 0;
 	font-size: medium;
-	color: dimgrey;   
+	color: dimgrey;
 	line-height: 66%;
 	padding-left: 1%;
+	height: 70px;
 }
 
 aside{
 	height: 100%; /* Высота в полный размер */
-	width: 10%;
+	width: 11%;
 	position: fixed; /* Фиксированная позиция сайд-бара. Так он будет оставаться на месте при скроллинге */
 	z-index: 1; /* Сайд-бар будет поверх остальных элементов */
 	top: 0; /* Сайдбар будет в самой верхней части страницы */
@@ -68,8 +64,26 @@ aside{
 	font-size: large;
 }
 
-body{
-	padding-left: 11%;
+body {
+	padding-left: 12%;
+	padding-bottom: 80px;	
+}
+
+.review-container, .review-button {
+	display: inline-block;
+	margin-top: 0.5em;
+	padding-left: 1%;
+	padding-top: 1%;
+}
+
+.review-text {
+	display: block;
+	margin-top: 0.5em;
+	padding-left: 1%;
+	padding-top: 1%;
+}
+
+html {
+	min-height: 100%;
 	position: relative;
-	padding-bottom: 6%;   
 }
