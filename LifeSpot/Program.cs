@@ -19,11 +19,7 @@ namespace LifeSpot
 
             CreateHostBuilder(args).Build().Run();
         }
-
-        //private static void Target(string str)
-        //{
-        //    throw new NotImplementedException();
-        //}
+              
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)

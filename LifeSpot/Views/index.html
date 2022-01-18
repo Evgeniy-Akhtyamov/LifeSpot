@@ -3,43 +3,54 @@
 <head>
 	<meta charset="UTF-8">
 	<title>LifeSpot</title>
+
 	<!--Подключение стилей по относительному пути из внешнего файла-->
 	<link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
+
 	<!-- Подключение Javascript-->
-	<script src="../Static/JS/index.js"></script>
+	<script type="text/javascript" src="../Static/JS/index.js"></script>
+
 	<!-- Внутренний скрипт с вызовами функций -->
 	<script>
-        // Проверка на возраст
-        checkAge();
-        // сохранение сессии
-        handleSession();
-        // Логируем в консоль.
-        sessionLog();
-        // функция для получения пользовательского ввода
-        const inputParseFunction = function() {
-            return document.getElementsByTagName('input')[0].value.toLowerCase();
+		// Проверка на возраст
+		// checkAge();
+
+		// сохранение сессии
+		//handleSession()
+
+		// вывод данных сессии в консоль
+		//sessionLog();
+
+		// обработка сессии
+		handleSession(logger, checker /* Коллбек-функции */);
+
+		// функция для получения пользовательского ввода
+		const inputParseFunction = function () {
+			return document.getElementsByTagName('input')[0].value.toLowerCase();
 		}
-        setTimeout(() =>
-            alert("Нравится LifeSpot? " + '\n' + "Подпишитесь на наш Instagram @lifespot999!"),
-            30000);
 	</script>
 </head>
-<!--Сайд-бар страницы-->
+
+<!--Сайд-бар страницы
 <aside id="sidebar">
 	<div class="navbar">
 		<a href="/"><p>Все трансляции</p></a>
 		<a href="/"><p>О проекте</p></a>
 	</div>
-</aside>
+</aside>-->
+
+<!--SIDEBAR-->
+
 <!--Хедер страницы находится сразу над тегом body-->
 <header id="header-index">
 	<!--Заголовок страницы-->
 	<h1> LifeSpot - прямые трансляции с улиц</h1>
 	<!--Параграф-->
 	<p>Покажем, что происходит прямо сейчас</p>
-	<input type="text" placeholder="Поиск видео" oninput="filterContent();" size=50>
+	<input type="text" placeholder="Поиск видео" oninput="filterContent()" size=50>
 </header>
-<body>	
+
+<body>
 	<div class="bordered">
 		<div class="video-container">
 			<iframe width="560" height="315" src="https://www.youtube.com/embed/srlpC5tmhYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -55,11 +66,13 @@
 		</div>
 	</div>
 </body>
+
 <!--Футер страницы находится под основной частью (body)-->
-<footer>
+<!--<footer>
 	<p>LifeSpot - все права защищены</p>
 	<p>Связаться с нами: contact@lifespot.ru</p>
-</footer>
-<!--SIDEBAR-->
+</footer>-->
+
 <!--FOOTER-->
+
 </html>

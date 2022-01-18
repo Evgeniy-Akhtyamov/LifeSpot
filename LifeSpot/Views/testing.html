@@ -6,18 +6,17 @@
     <title>LifeSpot</title>
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
     <!-- Подключение Javascript-->
-    <script defer src="../Static/JS/testing.js"></script>
+    <script type="text/javascript" defer src="../Static/JS/testing.js"></script>
 
 </head>
 
 <header id="header-index">
     <h1>LifeSpot - тестовая страница</h1>
     <p>Здесь можно экспериментировать с кодом</p>
-    <input type="text" oninput="
-		let elementText = document.getElementsByTagName('input')[0].value
-		// Выведем во всплывающее окно
-		alert(elementText)
-        " size=50>
+    <input type="text" oninput="/* Обработчик ввода текста */" size=50>
+    <br><br>
+    <!-- Добавляем кнопку и вызов обработчика -->
+    <button onclick="saveInput()">Сохранить</button>
 </header>
 
 <!--SIDEBAR-->
