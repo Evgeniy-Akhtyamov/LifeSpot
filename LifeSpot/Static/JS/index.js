@@ -34,31 +34,6 @@ function handleSession(logger, checker) {
 }
 
 /*
-* Сохранение данных сессии сразу при заходе пользователя на страницу
-*
-* */
-//let session = {
-//    'startDate': new Date().toLocaleString(),
-//    'userAgent': window.navigator.userAgent,
-//    'userAge': prompt("Пожалуйста, введите ваш возраст?")
-//}
-
-/*
-* Проверка возраста пользователя
-* 
-* */
-//function checkAge() {
-
-//    if (session.userAge >= 18){
-//        alert("Приветствуем на LifeSpot! " + '\n' +  "Текущее время: " + new Date().toLocaleString() );
-//    }
-//    else{
-//        alert("Наши трансляции не предназначены для лиц моложе 18 лет. ВыL будете перенаправлены");
-//        window.location.href = "http://www.google.com"
-//    }
-//}
-
-/*
 * Проверка возраста пользователя
 *
 * */
@@ -80,11 +55,6 @@ let checker = function (newVisit) {
 * Вывод данных сессии в консоль
 * 
 * */
-//let sessionLog = function () {
-//    console.log('Начало сессии: ' + session.startDate)
-//    console.log('Даныне клиента: ' + session.userAgent)
-//    console.log('Возраст пользователя: : ' + session.userAge)
-//}
 let logger = function () {
     console.log('Начало сессии: ' + window.sessionStorage.getItem("startDate"))
     console.log('Даныне клиента: ' + window.sessionStorage.getItem("userAgent"))
@@ -115,7 +85,7 @@ function filterContent() {
 * Всплывающее окно будет показано по таймауту
 *
 * */
-// setTimeout(() =>
-//     alert("Нравится LifeSpot? " + '\n' +  "Подпишитесь на наш Instagram @lifespot999!" ),
-// 7000);
+ setTimeout(() =>
+     alert("Нравится LifeSpot? " + '\n' +  "Подпишитесь на наш Instagram @lifespot999!" ),
+ 9000);
 
