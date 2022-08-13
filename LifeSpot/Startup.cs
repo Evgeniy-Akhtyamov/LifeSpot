@@ -24,11 +24,7 @@ namespace LifeSpot
                 app.UseDeveloperExceptionPage();
 
             app.UseRouting();
-
-            // Загружаем отдельные элементы для вставки в шаблон: боковое меню и футер
-            //string footerHtml = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "footer.html"));
-            //string sideBarHtml = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "Views", "Shared", "sideBar.html"));
-
+            
             app.UseEndpoints(endpoints =>
             {
                 // Маппинг статических файлов
